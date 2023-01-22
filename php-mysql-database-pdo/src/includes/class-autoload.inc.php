@@ -6,7 +6,7 @@
     //user-defined function
     function myAutoLoader($className) {
 
-        $path = "classes/";
+        $path = "./src/classes/";
         $extension =".class.php";
         $fullPath = $path . str_replace("\\", "/", $className) . $extension;
 
