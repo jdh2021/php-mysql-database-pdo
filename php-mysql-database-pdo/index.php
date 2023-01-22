@@ -15,7 +15,8 @@
         $testObject->getUsers();
         // with prepared statement (user input needed)
         $testObject->getUsersStmt('Jane', 'Doe');
-        
+        // with prepared statement, insert new record
+        $testObject->setUsersStmt('Janet', 'Adams', '1977-06-15');
     ?>
 </body>
 </html>

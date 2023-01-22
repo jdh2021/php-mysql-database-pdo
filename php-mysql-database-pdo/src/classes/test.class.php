@@ -28,4 +28,13 @@ class Test extends Dbh {
         }
     }
 
+    // prepared statement to insert into db
+    public function setUsersStmt($firstname, $lastname, $dob) {
+        $sql = "INSERT INTO users(user_firstname, user_lastname, user_dateofbirth)
+                VALUES(?, ?, ?)";
+        // first prepare without user input, prevents malicious injection
+        $stmt = $this->connect()->prepare($sql);
+        // then execute the statment
+        $stmt->execute([$firstname, $lastname, $dob]);
+    }
 }
