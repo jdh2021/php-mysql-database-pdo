@@ -17,6 +17,9 @@
         $testObject->getUsersStmt('Jane', 'Doe');
         // with prepared statement, insert new record
         $testObject->setUsersStmt('Janet', 'Adams', '1977-06-15');
+
+        $usersObject = new UsersView();
+        $usersObject ->showUser("Janet");
     ?>
 </body>
 </html>
