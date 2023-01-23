@@ -18,8 +18,13 @@
         // with prepared statement, insert new record
         $testObject->setUsersStmt('Janet', 'Adams', '1977-06-15');
 
+        // fetch information from database
         $usersObject = new UsersView();
         $usersObject ->showUser("Janet");
+
+        // insert user into database
+        $usersObject2 = new UsersContr();
+        $usersObject2->createUser('Sarah', 'Smith', '1977-11-22');
     ?>
 </body>
 </html>
